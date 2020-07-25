@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>生日快乐</title>
+		<style type="text/css">
+			body{
+				  margin: 0
+				  padding: 0;
+				  background-image: url(img/lyf.jpg);
+				  background-size: 100%;
+				}
+			img{
+				  width: 100%;
+				}
+			.card{
+				  position: absolute;
+				  /*top: 47%;
+				  left: 53%;*/
+				  /*top: 40%;
+				  left: 25%;*/
+				  top: 40%;
+				  left: 27%;
+				  width: 300px;
+				  height: 250px;
+				  background: transparent;
+				  background-repeat: no-repeat;
+				  background-position: right bottom;
+				  transform-style: preserve-3d;
+				  transform: translate(-50%,-50%) perspective(2000px);
+				  box-shadow: inset 300px 0 50px rgba(0, 0, 0, 0.5), 0 20px 100px rgba(0, 0, 0, 0.5);
+				  transition: 1s;
+				}
+			.card:hover{
+				  transform: translate(-50%,-50%) perspective(2000px) rotate(-10deg);
+				  box-shadow: inset 20px 0 50px rgba(0, 0, 0, 0.5), 0 10px 100px rgba(0, 0, 0, 0.5);
+				}
+			.card::before{
+				  content: '';
+				  position: absolute;
+				  top:-5px;
+				  left: 0;
+				  width: 100%;
+				  height: 5px;
+				  z-index: 10;
+				  background: transparent;
+				  transform: skewX(-45deg);
+				}
+			.card::after{
+				  content: '';
+				  position: absolute;
+				  top: 0;
+				  right: -5px;
+				  width: 5px;
+				  height: 100%;
+				  background-color: transparent;
+				}
+			.card .imgBox{ 
+				  user-select: none; 
+				  width: 100%;
+				  height: 100%;
+				  position: relative;
+				  transform-origin: left; 
+				  transition: 1s cubic-bezier(.15,1.7,.84,.58);
+				}
+			.card:hover .imgBox{
+				  transform: rotateY(-155deg);
+				}
+			.card .details{
+				  position: absolute;
+				  top:0;
+				  left: 0;
+				  box-sizing: border-box;
+				  padding: 20px;
+				  z-index: -1;
+				}
+			h2{
+				font-family: "楷体";
+				color: red;
+			}
+			p{
+				font-family: "楷体";
+				color: #FFA500;
+				font-size: 40px;
+				line-height: 10px;
+			}
+		</style>
+	</head>
+	<body>
+    <div class='card'>
+        <div class="imgBox">
+            <img src="img/yf.jpg">
+        </div>
+        <div class='details'>
+            <h2>祝朱尧：</h2>
+            <p>&nbsp;&nbsp;生日</p>
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;快乐！！</p>
+        </div>
+    </div>
+	</body>
+</html>
